@@ -3,6 +3,7 @@
 #include <string.h> // STRING MANIP
 // CONSTANT
 #define tableScale 10
+#define stringLength 255
 
 int main()
 {
@@ -130,7 +131,14 @@ int main()
     strcpy(myString, "lagStudio"); // copy string b -> a
 
     printf("Your string : %s \n", myString);
-    printf("Your string length : %d", strlen(myString));
+    printf("Your string length : %d \n", strlen(myString));
+
+    fflush(stdin);
+
+    // fgets string (get string with spaces)
+    printf("Enter your string :\n");
+    fgets(myString, stringLength, stdin);
+    printf("%s \n", myString);
 
     return 0;
 }
